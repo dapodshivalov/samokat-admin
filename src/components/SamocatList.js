@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Row, Card, ListGroup, Container, Col } from 'react-bootstrap';
-import Socket from '../Socket';
 import '../styles/SamocatList.css';
 
 export default class SamocatList extends Component {

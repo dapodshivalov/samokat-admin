@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
-import Socket from '../Socket'
-import SamocatList from './SamocatList';
 import GoogleMapReact from 'google-map-react';
-import LOS_ANGELES_CENTER from '../const/la_center';
+import MOSCOW_CENTER from '../const/moscow_center';
 
-import Marker from './Marker';
-import { Button } from 'bootstrap';
-
+import Marker from './Marker';  
 
 
 export default class MapComponent extends Component {
@@ -29,7 +25,7 @@ export default class MapComponent extends Component {
                     <GoogleMapReact
                     bootstrapURLKeys={{ key: "AIzaSyCGL3Y8gyvjRjp-FWbfaG9H6X3n4msyCo4" }}
                     defaultZoom={13}
-                    defaultCenter={LOS_ANGELES_CENTER}
+                    defaultCenter={MOSCOW_CENTER}
                     >
                     {transports.map((transport) => (
                         <div 

@@ -1,15 +1,10 @@
-import React, { useState, useEffect, Component } from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import '../styles/Container.css';
 
-import GoogleMapReact from 'google-map-react'
-// import 'google-map-react/dist/index.css'
-
-import LOS_ANGELES_CENTER from '../const/la_center';
-
 import Socket from '../Socket.js';
 import MapComponent from './MapComponent';
-import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SamocatList from './SamocatList';

@@ -1,0 +1,2 @@
+var MOSCOW_CENTER = [55.751244, 37.618423]
+export default MOSCOW_CENTER;
