@@ -77,7 +77,6 @@ class Main extends Component {
   selectStation(id) {
     var token = localStorage.getItem("token");
     const headers = {
-        // 'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + token,
       };
     axios.get("https://scooter.mac-siemens.ru:49003/api/station/" + id, {headers: headers}).then(res => {
@@ -137,7 +136,6 @@ class Main extends Component {
     var token = localStorage.getItem('token');
 
     const headers = {
-        // 'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + token,
       };
 

@@ -27,10 +27,8 @@ function App() {
     console.log(data);
 
     axios.post('https://scooter.mac-siemens.ru:49003/api/auth/admin/login', {
-      // "login": data["login"],
-      // "password": data["password"],
-      "login": "samokatAdmin",
-      "password": "PesockayaElena",
+      "login": data["login"],
+      "password": data["password"],
     }).then(res => {
       console.log(res.data);
       localStorage.setItem("token", res.data.token);
