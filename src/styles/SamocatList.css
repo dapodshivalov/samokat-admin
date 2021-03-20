@@ -1,0 +1,7 @@
+.height-to-device {
+    height: 100vh;
+}
+
+.scrollable {
+    overflow-y: scroll;
+}
