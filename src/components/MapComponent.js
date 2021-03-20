@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import GoogleMapReact from 'google-map-react';
-import MOSCOW_CENTER from '../const/moscow_center';
 
-import Marker from './Marker';  
+import TransportMarker from './TransportMarker';
+import MOSCOW_CENTER from '../const/moscow_center'
+import StationMarker from './StationMarker';
+
 
 
 export default class MapComponent extends Component {
@@ -12,7 +14,7 @@ export default class MapComponent extends Component {
     }
 
     render() {
-        // console.log("RENDER STATIONS");
+        // console.log("STATIONS");
         // console.log(this.props.stations);
         var info = this.props.transports;
         var transports = [];
@@ -28,24 +30,18 @@ export default class MapComponent extends Component {
                     defaultCenter={MOSCOW_CENTER}
                     >
                     {transports.map((transport) => (
-                        <div 
+                        <TransportMarker 
                         key={transport.id}
                         text={transport.name}
                         lat={transport.geo.lat}
                         lng={transport.geo.lon}
-                        >
-                            <button style={{background: 'none', border: 'none',}} 
-                                onClick={(event)=>{
-                                   this.props.onTransportSelect(transport.id); 
-                                }}>
-                                <img src="/transport.svg" style={{width: '30px'}}></img>
-                            </button>
-                        </div>
+                        onClick={(event)=>{this.props.onTransportSelect(transport.id);}}>
+                        </TransportMarker>
                     ))}
 
 
                     {this.props.stations.map((station) => (
-                        <Marker 
+                        <StationMarker 
                         // key={place.id}
                         // text={place.name}
                         lat={station.geo.lat}
